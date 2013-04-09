@@ -1,0 +1,639 @@
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class tic_tac_toe
+
+{
+
+public static void main( String[] args)
+
+{
+
+   boolean bPlaying = true;
+
+   String playerMove;
+
+   int computerMove;
+
+   boolean bInValidMove = true;
+
+   boolean aInValidMove = true;
+
+   String sBoard = "";
+
+   String Cell1 = "1", Cell2 = "2", Cell3 = "3", Cell4 = "4", Cell5 = "5",
+
+  		 Cell6 = "6", Cell7 = "7", Cell8 = "8", Cell9 = "9";
+
+   //
+
+   do
+
+   {
+
+  	 //loop until the player enter a valid move
+
+  	 bInValidMove = true;
+
+  	 do
+
+  	 {
+
+  		 sBoard =  Cell1+ "|" + Cell2 + "|" + Cell3 +"\n";
+
+  		 sBoard = sBoard + "--|---|---\n";
+
+  		 sBoard = sBoard + Cell4 + "|" + Cell5 + "|" + Cell6 +"\n";
+
+  		 sBoard = sBoard + "--|---|---\n";
+
+  		 sBoard = sBoard + Cell7 + "|" + Cell8 + "|" + Cell9 +"\n";
+
+  		 sBoard = sBoard + "Enter Number between 1 and 9: ";
+
+  		 /*sBoard = String.format(" %s| %s | %s" +
+
+  				   "\n--|---|---" +
+
+  				   "\n %s| %s | %s" +
+
+  				   "\n--|---|---" +
+
+  				   "\n %s| %s | %s",
+
+  				   Cell1, Cell2, Cell3,
+
+  				   Cell4, Cell5, Cell6,
+
+  				   Cell7, Cell8, Cell9);*/
+
+  			
+
+  		 playerMove = JOptionPane.showInputDialog(sBoard);
+
+  		 if (playerMove.equalsIgnoreCase("1"))
+
+  		 {
+
+  			 if (!Cell1.equals("1"))
+
+  			 {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell1 = "X";
+
+  				 bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (playerMove.equalsIgnoreCase("2"))
+
+  		 {
+
+  			 if (!Cell2.equals("2"))
+
+  			 {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell2 = "X";
+
+  				 bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (playerMove.equalsIgnoreCase("3"))
+
+  		 {
+
+  			 if (!Cell3.equals("3"))
+
+  		
+   {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell3 = "X";
+
+  				 bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (playerMove.equalsIgnoreCase("4"))
+
+  		 {
+
+  			 if (!Cell4.equals("4"))
+
+  			 {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+
+  			 else
+
+  			 {
+
+  				 Cell4 = "X";
+
+  				 bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (playerMove.equalsIgnoreCase("5"))
+
+  		 {
+
+  			 if (!Cell5.equals("5"))
+
+  			 {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell5 = "X";
+
+  			
+   bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (playerMove.equalsIgnoreCase("6"))
+
+  		 {
+
+  			 if (!Cell6.equals("6"))
+
+  			 {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell6 = "X";
+
+  				 bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (playerMove.equalsIgnoreCase("7"))
+
+  		 {
+
+  			 if (!Cell7.equals("7"))
+
+  			 {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell7 = "X";
+
+  				 bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (playerMove.equalsIgnoreCase("8"))
+
+  		 {
+
+  			 if (!Cell8.equals("8"))
+
+  		
+   {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell8 = "X";
+
+  				 bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (playerMove.equalsIgnoreCase("9"))
+
+  		 {
+
+  			 if (!Cell9.equals("9"))
+
+  			 {
+
+  			 JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+
+  			 else
+
+  			 {
+
+  				 Cell9 = "X";
+
+  				 bInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 if (((Cell1 == "X") && (Cell2 == "X") && (Cell3 == "X"))
+
+  				 || ((Cell4 == "X") && (Cell5 == "X") && (Cell6 == "X"))
+
+                     || ((Cell7 == "X") && (Cell8 == "X") && (Cell9 == "X"))
+
+                     || ((Cell1 == "X") && (Cell4 == "X") && (Cell7 == "X"))
+
+                     || ((Cell2 == "X") && (Cell5 == "X") && (Cell8 == "X"))
+
+                     || ((Cell3 == "X") && (Cell6 == "X") && (Cell9 == "X"))
+
+                     || ((Cell1 == "X") && (Cell5 == "X") && (Cell9 == "X"))
+
+                     || ((Cell3 == "X") && (Cell5 == "X") && (Cell7 == "X")))
+
+  		 {
+
+  		 JOptionPane.showMessageDialog(null,"You win");	
+
+  		 bPlaying = false;
+
+  		 }
+
+  		 else
+
+  		 {
+
+  			 aInValidMove = true;
+
+  		 do
+
+  		 {
+
+  		 computerMove = 1 + (int)(Math.random()*9);
+
+  		 if (computerMove == 1)
+
+  		 {
+
+  			 if (!Cell1.equals("1"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell1 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (computerMove == 2)
+
+  		 {
+
+  			 if (!Cell2.equals("2"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell2 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (computerMove == 3)
+
+  		 {
+
+  			 if (!Cell3.equals("3"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell3 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (computerMove == 4)
+
+  		 {
+
+  			 if (!Cell4.equals("4"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell4 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (computerMove == 5)
+
+  		 {
+
+  			 if (!Cell5.equals("5"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell5 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (computerMove == 6)
+
+  		 {
+
+  			 if (!Cell6.equals("6"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell6 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (computerMove == 7)
+
+  		 {
+
+  			 if (!Cell7.equals("7"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell7 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (computerMove == 2)
+
+  		 {
+
+  			 if (!Cell8.equals("8"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell8 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 else if (computerMove == 9)
+
+  		 {
+
+  			 if (!Cell9.equals("9"))
+
+  			 {
+
+  			 //JOptionPane.showMessageDialog(null,"Wrong move");
+
+  			 }
+
+  			 else
+
+  			 {
+
+  				 Cell9 = "O";
+
+  				 bInValidMove = false;
+
+  				 aInValidMove = false;
+
+  			 }
+
+  		 }
+
+  		 if (((Cell1 == "O") && (Cell2 == "O") && (Cell3 == "X"))
+
+  				 || ((Cell4 == "O") && (Cell5 == "O") && (Cell6 == "O"))
+
+                    || ((Cell7 == "O") && (Cell8 == "O") && (Cell9 == "O"))
+
+                    || ((Cell1 == "O") && (Cell4 == "O") && (Cell7 == "O"))
+
+                    || ((Cell2 == "O") && (Cell5 == "O") && (Cell8 == "O"))
+
+                    || ((Cell3 == "O") && (Cell6 == "O") && (Cell9 == "O"))
+
+                    || ((Cell1 == "O") && (Cell5 == "O") && (Cell9 == "O"))
+
+                    || ((Cell3 == "O") && (Cell5 == "O") && (Cell7 == "O")))
+
+  		 {
+
+  		 JOptionPane.showMessageDialog(null,"You Lost");	
+
+  		 bPlaying = false;
+
+  		 }	
+
+  		 }while(aInValidMove);
+
+  		 }
+
+  	 }while(bInValidMove);
+
+  
+   }while(bPlaying);
+
+  	 /*JOptionPane.showMessageDialog(null,sBoard);
+
+  	 sBoard = "Get Input (1-9)";
+
+  	 JOptionPane.showMessageDialog(null,sBoard);
+
+  	 sBoard = "Processing:a)Validate Input";
+
+  	 JOptionPane.showMessageDialog(null,sBoard);
+
+  	 sBoard = "Processing:b)Validate available slot";
+
+  	 JOptionPane.showMessageDialog(null,sBoard);
+
+  	 sBoard = "Rebuild Board";
+
+  	 JOptionPane.showMessageDialog(null,sBoard);
+
+  	 sBoard = "Check Winner";
+
+  	 JOptionPane.showMessageDialog(null,sBoard);
+
+  	 sBoard = "Generate System Move:a) 1-9";
+
+  	 JOptionPane.showMessageDialog(null,sBoard);
+
+  	 sBoard = "Processing:b)Validate available slot";
+
+  	 JOptionPane.showMessageDialog(null,sBoard);
+
+  	 sBoard = "Check Winner";
+
+  	 JOptionPane.showMessageDialog(null,sBoard);
+
+  	 */
+
+}
+
+}
+
